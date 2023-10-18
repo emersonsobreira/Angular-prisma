@@ -1,0 +1,53 @@
+<h1>Cadastro de Aluno</h1>
+
+<form [formGroup]="formularioAluno">
+
+
+  <div>
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <mat-label>Matrícula</mat-label>
+      <input type="number" matInput formControlName="matricula">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Turma</mat-label>
+      <mat-select formControlName="turma_id">
+        <mat-option *ngFor="let turma of listaTurmas" [value]="turma.id">
+          {{turma.nome}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Senha</mat-label>
+      <input matInput type="password" formControlName="senha">
+    </mat-form-field>
+  </div>
+
+
+</form>
+
+
+<button mat-raised-button color="primary" (click)="salvar()" [disabled]="!formularioAluno.valid">
+  Salvar
+  
+</button>
+
+{{formularioAluno.value | json}}
+<br>
+Válido: {{formularioAluno.valid}}

@@ -1,0 +1,18 @@
+<h1>Cadastro de Professor</h1>
+
+<form [formGroup]="formularioAluno">
+
+<div>
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="nome">
+  </mat-form-field>
+</div>
+</form>
+<button mat-raised-button color="primary"  [disabled]="">
+  Salvar </button>
+
+  
+{{formularioProfessor.value | json}}
+<br>
+Válido: {{formularioProfessor.valid}}

@@ -20,7 +20,7 @@ export class ProfessorService {
 
   addProfessor(professor: professor) {
     this.listaProfessor.push(professor);
-
+         
   }
   getProfessor() {
     return this.http.get('http://localhost:3000/professores/listaProfessor')

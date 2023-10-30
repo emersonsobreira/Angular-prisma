@@ -7,9 +7,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-cadastro-aluno',
-  templateUrl: './cadastro-aluno.component.html',
+  templateUrl:'./cadastro-aluno.component.html',
   styleUrls: ['./cadastro-aluno.component.scss']
 })
+
 export class CadastroAlunoComponent implements OnInit {
 
   formularioAluno!: any

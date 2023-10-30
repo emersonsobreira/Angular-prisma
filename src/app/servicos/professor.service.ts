@@ -22,11 +22,17 @@ export class ProfessorService {
     this.listaProfessor.push(professor);
 
   }
-
   getProfessor() {
-    return this.http.get('http://localhost:3000/professors/')
+    return this.http.get('http://localhost:3000/professores/listaProfessor')
   }
 
-}
+
+  createProfessor(dados: any) {
+    return this.http.post('http://localhost:3000/professores', dados)
+  }
+  
+  }
+
+
 
 

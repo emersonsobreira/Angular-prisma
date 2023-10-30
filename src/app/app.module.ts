@@ -20,13 +20,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http'
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { professorComponent } from './professor/professor.component';
+import { ProfessorComponent } from './professor/professor.component';
 @NgModule({
   declarations: [
     AppComponent,
     CadastroAlunoComponent,
     AlunosComponent,
-   professorComponent,
+   ProfessorComponent,
   ],
   imports: [
     BrowserModule,

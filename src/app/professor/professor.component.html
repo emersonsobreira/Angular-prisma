@@ -1,6 +1,6 @@
 <h1>Cadastro de Professor</h1>
 
-<form [formGroup]="formularioAluno">
+<form [formGroup]="formularioProfessor">
 
 <div>
   <mat-form-field>
@@ -12,7 +12,8 @@
 <button mat-raised-button color="primary"  [disabled]="">
   Salvar </button>
 
-  
-{{formularioProfessor.value | json}}
+
+  {{formularioProfessor.value | json}}
 <br>
 Válido: {{formularioProfessor.valid}}
+  
